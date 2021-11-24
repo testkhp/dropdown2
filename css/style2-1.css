@@ -1,0 +1,60 @@
+/*css reset 초기화구문*/
+*{margin: 0; padding: 0; box-sizing: border-box;}
+body{line-height: 1;}
+ul, ol, li{list-style: none;}
+a{text-decoration: none; color: black;}
+img, video{vertical-align: top;}
+table {border-collapse: collapse;}
+input, textarea, select {outline: 0;}
+button {border: none;}
+.clear_fix::after{content: ""; display: block; clear: both;}
+.elli {white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+
+
+/*헤더 레이아웃*/
+#header { background-color:pink; position:relative;}
+#header .center { width:1200px; 
+                  margin:0 auto;
+                  background-color:aqua;
+                  display:flex;
+                  align-items:center;
+                  justify-content:space-between;}
+
+
+.gnb { display:flex; }
+.gnb > li { padding:0 30px; position:relative;}
+.gnb > li > a { color:red; font-size:16px;
+                line-height:60px;}
+
+.gnb > li > a:hover { color:brown; }
+
+/*2댑스는 중간구역하고 겹치게 처리*/
+.depth2 {position:absolute; 
+         background-color:yellow;
+         overflow: hidden;
+         width:100%; /*시안마다 사이즈 다름*/
+         left:0; height:0; z-index:99; transition:all 0.5s;}
+
+.depth2 li a {color:blue; 
+              font-size:14px;
+              line-height:40px;
+              display:block;
+              text-align:center; 
+              transition:all 0.5s;
+             }
+/*2댑스 마우스 :hover 선택자 */
+.depth2 li a:hover { color:purple;
+                     background-color:#fff;}
+
+/*gnb_bg 추가*/
+.gnb_bg {position:absolute; 
+         width:100%;
+         left:0;
+         height:0;
+         transition:all 0.5s;
+         background-color:yellow;
+        } 
+                     
+/*중간구역*/
+.cont1 { background-color:green; height:400px;
+         font-size:100px; color:#fff;}
